@@ -1,13 +1,11 @@
 package com.okavango.controller;
 
-import com.okavango.entity.User;
 import com.okavango.entity.dto.UserRegistrationDTO;
 import com.okavango.entity.dto.UserResponseDTO;
 import com.okavango.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

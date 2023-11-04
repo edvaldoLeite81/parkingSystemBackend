@@ -3,13 +3,13 @@ package com.okavango.service;
 import com.okavango.entity.User;
 import com.okavango.entity.dto.UserRegistrationDTO;
 import com.okavango.entity.dto.UserResponseDTO;
+import com.okavango.exception.ResourceNotFoundException;
 import com.okavango.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,7 +45,7 @@ public class UserService {
             UserResponseDTO userResponseDTO = new UserResponseDTO(user);
             return ResponseEntity.ok(userResponseDTO);
         }
-        else throw new RuntimeException(message);
+        else throw new ResourceNotFoundException(id,message);
     }
 }
 
