@@ -37,6 +37,11 @@ public class User {
     private String createdBy;
     private String modifiedBy;
 
+    public User(String userName, String password){
+        this.userName = userName;
+        this.password = password;
+    }
+
     //enum
     public enum Role {
         ROLE_ADMIN, ROLE_CLIENT
