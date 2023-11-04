@@ -30,7 +30,7 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 25)
-    private Role role;
+    private Role role = Role.ROLE_CLIENT;
 
     private LocalDateTime creationDate;
     private LocalDateTime modificationDate;
