@@ -12,5 +12,4 @@ import lombok.Setter;
 public class UserRegistrationDTO {
     private String userName;
     private String password;
-
 }

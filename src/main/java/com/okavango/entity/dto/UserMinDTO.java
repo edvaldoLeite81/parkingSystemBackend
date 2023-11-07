@@ -8,12 +8,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class UserResponseDTO {
+public class UserMinDTO {
     private Long id;
     private String userName;
     private String role;
 
-    public UserResponseDTO(User user){
+    public UserMinDTO(User user){
         String profile = String.valueOf(user.getRole());
         id = user.getId();
         userName = user.getUserName();
